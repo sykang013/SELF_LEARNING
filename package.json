@@ -1,0 +1,26 @@
+{
+  "name": "pkg-for-sl",
+  "version": "1.0.0",
+  "description": "ESLint for learning react",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint src --ext .tsx,.ts,.jsx,.js",
+    "lint:fix": "npm run lint -- --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sykang013/SELF_LEARNING.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sykang013/SELF_LEARNING/issues"
+  },
+  "homepage": "https://github.com/sykang013/SELF_LEARNING#readme",
+  "devDependencies": {
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-react-hooks": "^4.6.0"
+  }
+}

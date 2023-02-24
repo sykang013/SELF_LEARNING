@@ -31,3 +31,7 @@ receivedEmailAddress = emailAddress || 'user@company.io';
 /* ?? vs. || ----------------------------------------------------------- */
 // || → 첫번째 Truthy 값을 반환
 // ?? → 첫번째 정의된(defined) 값을 반환
+
+message = "hello"
+
+console.log(message)
