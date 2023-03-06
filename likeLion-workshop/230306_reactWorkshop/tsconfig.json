@@ -1,0 +1,30 @@
+{
+  //컴파일 할 때 이런 옵션을 따르렴
+  "compilerOptions": {
+    //어느 버젼을 지원할지
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    //[] 안에 있는 기능들을 lib로 가져오겠다.
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": false,
+    //lib 까지 타입 체크하지 않겠다. 
+    "skipLibCheck": true,
+    "esModuleInterop": false,
+    //디폴트 어쩌구 
+    "allowSyntheticDefaultImports": true,
+    //스트릭트 모드 설정
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    //내보내지 않겠다.(ts파일을 js로)
+    "noEmit": true,
+    //react 17버젼부터 지원하는 jsx 버젼을 가져오겠다.(일반 react 하면 )
+    "jsx": "react-jsx"
+  },
+  "include": ["src"],
+  //" " 파일을 참고해서 사용한다.
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
