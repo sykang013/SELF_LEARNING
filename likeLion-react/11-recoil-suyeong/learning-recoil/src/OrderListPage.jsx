@@ -1,16 +1,29 @@
-import { useRecoilValue } from 'recoil';
-import { orderListFamily } from './@store/orderListState';
+import { useRecoilValue, useSetRecoilState } from 'recoil';
+import { orderListState, selectedOrderId } from './@store/orderListState';
 
 export default function OrderListPage() {
-  const beverage = useRecoilValue(orderListFamily('order-2'));
+  const orderList = useRecoilValue(orderListState);
+  const setSelectedOrderId = useSetRecoilState(selectedOrderId);
 
   return (
     <div>
-      <h2>주문한 음료</h2>
-      <div>
-        <h3>{beverage.order}</h3>
-        <span>{currencyKR(beverage.price)}</span>
-      </div>
+      <h2>주문 목록</h2>
+      <ul>
+        {orderList.map(({ id, order, price }) => (
+          <li key={id}>
+            <h3>{order}</h3>
+            <span>{currencyKR(price)}</span>
+            <button
+              type="button"
+              onClick={() => {
+                setSelectedOrderId(id);
+              }}
+            >
+              선택
+            </button>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
